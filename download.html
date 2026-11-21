@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRASURE X - Download Android APK & Web App</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #060913;
+      --card-bg: rgba(13, 20, 38, 0.7);
+      --primary: #00f2ff;
+      --accent: #7000ff;
+      --success: #00ff94;
+      --border: rgba(0, 242, 255, 0.2);
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(0, 242, 255, 0.15), transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(112, 0, 255, 0.12), transparent 40%);
+      color: var(--text);
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 16px;
+    }
+    .container {
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: rgba(0, 242, 255, 0.1);
+      border: 1px solid var(--primary);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 40%, #00f2ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tagline {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 28px;
+      border-radius: 14px;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #00f2ff, #0099ff);
+      color: #050b14;
+      box-shadow: 0 0 30px rgba(0, 242, 255, 0.4);
+      border: none;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(0, 242, 255, 0.6);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      backdrop-filter: blur(10px);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      backdrop-filter: blur(20px);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 242, 255, 0.5);
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .instructions {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 28px;
+      margin-bottom: 48px;
+    }
+    .instructions h3 {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      color: var(--primary);
+    }
+    .instructions ol {
+      padding-left: 20px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+    .instructions strong {
+      color: #ffffff;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: auto;
+      padding-top: 24px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">● Public Release v1.1.1 Available</div>
+      <h1>TRASURE X</h1>
+      <p class="tagline">
+        Hyper-Local Intelligence, Offline & Tactical Maps, Real-Time Community Discovery, and KIWI AI Companion.
+      </p>
+      
+      <div class="actions">
+        <a href="./TrasureX.apk" class="btn btn-primary" download>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Android APK (v1.1.1)
+        </a>
+        <a href="./index.html" class="btn btn-secondary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Launch Web App Explorer
+        </a>
+        <a href="https://github.com/tsuremap/TRASURE-X-PROTOTYPE/releases" target="_blank" class="btn btn-secondary">
+          View Releases on GitHub
+        </a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <h3>📍 Tactical Offline Maps</h3>
+        <p>Dynamic MapLibre GL raster and vector navigation optimized for both low-bandwidth environments and high-precision tactical viewing.</p>
+      </div>
+      <div class="card">
+        <h3>🛍️ Live Discovery Venues</h3>
+        <p>Explore 50+ real-time shops, restaurants, cafes, hotels, and local markets synchronized directly with the TRASURE X backend.</p>
+      </div>
+      <div class="card">
+        <h3>🤖 KIWI AI Companion</h3>
+        <p>Integrated conversational AI guide offering local recommendations, custom route planning, and verified local travel intel.</p>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h3>📲 How to Install the APK on Your Android Device</h3>
+      <ol>
+        <li>Click <strong>Download Android APK</strong> on this page to download <code>TrasureX.apk</code>.</li>
+        <li>Once downloaded, open your notification drawer or Downloads folder and tap <code>TrasureX.apk</code>.</li>
+        <li>If prompted with <em>"For your security, your phone is not allowed to install unknown apps"</em>, tap <strong>Settings</strong> and toggle <strong>Allow from this source</strong>.</li>
+        <li>Tap <strong>Install</strong> and then open <strong>TRASURE X</strong>!</li>
+      </ol>
+    </div>
+
+    <footer>
+      TRASURE X | Developed by <a href="https://github.com/pheonix14" target="_blank">pheonix14</a> | Hosted via <a href="https://github.com/tsuremap/TRASURE-X-PROTOTYPE" target="_blank">tsuremap/TRASURE-X-PROTOTYPE</a>
+    </footer>
+  </div>
+</body>
+</html>
