@@ -3,7 +3,7 @@
 Public distribution and live web explorer for **TRASURE X**.
 
 - **Live Web Application**: [Launch Web Explorer](https://tsuremap.github.io/trasure-x-app/)
-- **Download Android APK**: [Download APK Portal](https://tsuremap.github.io/trasure-x-app/download.html) | [Direct APK File (v1.3.1)](https://tsuremap.github.io/trasure-x-app/TrasureX.apk)
+- **Download Android APK**: [Download APK Portal](https://tsuremap.github.io/trasure-x-app/download.html) | [Direct APK File (v1.3.6)](https://tsuremap.github.io/trasure-x-app/TrasureX.apk)
 - **GitHub Releases Archive**: [tsuremap/TRASURE-X-PROTOTYPE Releases](https://github.com/tsuremap/TRASURE-X-PROTOTYPE/releases)
 
 ---
